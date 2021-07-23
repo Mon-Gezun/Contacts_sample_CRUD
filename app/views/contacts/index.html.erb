@@ -6,21 +6,15 @@
         <th>Name</th>
         <th>Phone Number</th>
         <th>Email</th>
-        <th>Action</th>
       </tr>
     </thead>
     <tbody>
       <% @contacts.each do |contact| %>
-      <tr>
-        <th><%= contact.name %></th>
-        <th><%= contact.number %></th>
-        <th><%= contact.email %></th>
-        <th>
-            <%= link_to 'Edit', edit_contact_path(contact), class: "btn btn-primary" %>
-            <%= link_to 'Show', contact_path(contact), class: "btn btn-warning" %>
-            <%= link_to 'Delete', contact_path(contact), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger" %>
-        </th>
-      </tr>
+        <tr>
+          <th><%= link_to contact.name, contact_path(contact), class: "link" %></th>
+          <th><%= link_to contact.number, contact_path(contact), class: "link" %></th>
+          <th><%= link_to contact.email, contact_path(contact), class: "link" %></th>
+        </tr>
       <% end %>
     </tbody>
   </table>

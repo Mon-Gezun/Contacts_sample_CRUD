@@ -7,5 +7,7 @@
     Email Address: <strong><%= @contact.email %></strong> 
   </p>
   <hr class="my-4">
-  <%= link_to 'Back', contacts_path, class: "btn btn-dark" %>
+  <%= link_to 'Cancel', contacts_path, class: "btn btn-secondary" %>
+  <%= link_to 'Edit', edit_contact_path, class: "btn btn-primary" %>
+  <%= link_to 'Delete', contact_path, method: :delete, data: {confirm: "Are you sure?"},  class: "btn btn-danger" %>
 </div>
