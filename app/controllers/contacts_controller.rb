@@ -12,12 +12,7 @@ class ContactsController < ApplicationController
   def edit
   end
 
-  def update
-    if @contact.update(contact_params)
-      redirect_to contacts_path, notice: "Contact was successfully updated"
-    else
-      render :edit
-    end
+  def show
   end
 
   def create
@@ -28,6 +23,19 @@ class ContactsController < ApplicationController
     else
       render :new
     end
+  end
+  
+  def update
+    if @contact.update(contact_params)
+      redirect_to contacts_path, notice: "Contact was successfully updated"
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    notice = @contact.destroy ? "Contact was successfully destroyed." : "Failed destroy"
+    redirect_to contacts_path, notice: notice
   end
 
   private

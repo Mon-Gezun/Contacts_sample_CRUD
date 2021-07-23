@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <h1 class="display-4"><%= @contact.name %></h1>
+  <p class="lead">
+  Contact Number: <strong><%= @contact.number %></strong>
+  </p> 
+  <p>
+    Email Address: <strong><%= @contact.email %></strong> 
+  </p>
+  <hr class="my-4">
+  <%= link_to 'Back', contacts_path, class: "btn btn-dark" %>
+</div>

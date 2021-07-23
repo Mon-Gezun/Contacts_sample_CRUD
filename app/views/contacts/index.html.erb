@@ -18,6 +18,7 @@
         <th>
             <%= link_to 'Edit', edit_contact_path(contact), class: "btn btn-primary" %>
             <%= link_to 'Show', contact_path(contact), class: "btn btn-warning" %>
+            <%= link_to 'Delete', contact_path(contact), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger" %>
         </th>
       </tr>
       <% end %>
