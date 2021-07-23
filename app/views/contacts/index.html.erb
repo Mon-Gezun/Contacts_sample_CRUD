@@ -1,5 +1,21 @@
 <h1>List of Contacts</h1>
 
 <% @contacts.each do |contact| %>
-  <div><%= contact.name %></div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <th><%= contact.name %></th>
+      <th><%= contact.number %></th>
+      <th><%= contact.email %></th>
+      </tr>
+    </tbody>
+    
+  </table>
 <% end %>
