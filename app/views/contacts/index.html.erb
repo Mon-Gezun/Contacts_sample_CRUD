@@ -1,7 +1,6 @@
 <h1>List of Contacts</h1>
 
-<% @contacts.each do |contact| %>
-  <table>
+  <table class="table table-striped table-hover">
     <thead>
       <tr>
         <th>Name</th>
@@ -10,12 +9,12 @@
       </tr>
     </thead>
     <tbody>
+      <% @contacts.each do |contact| %>
       <tr>
-      <th><%= contact.name %></th>
-      <th><%= contact.number %></th>
-      <th><%= contact.email %></th>
+        <th><%= contact.name %></th>
+        <th><%= contact.number %></th>
+        <th><%= contact.email %></th>
       </tr>
+      <% end %>
     </tbody>
-    
   </table>
-<% end %>
